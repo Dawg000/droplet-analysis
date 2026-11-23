@@ -1,0 +1,28 @@
+# Python dependencies for the droplet analysis scripts.
+# Versions are unpinned; pin to your working environment with `pip freeze` if needed.
+#
+# Install PyTorch first with the CUDA build that matches your GPU/driver
+# (see https://pytorch.org/get-started/locally/), then: pip install -r requirements.txt
+
+numpy
+scipy
+pandas
+pyarrow
+matplotlib
+opencv-python
+pycocotools
+torch
+PyYAML
+tqdm
+h5py
+scikit-learn
+psutil
+
+# SAM2 (model configs come with the package; checkpoints must be downloaded separately)
+sam2 @ git+https://github.com/facebookresearch/sam2.git
+
+# Optional GPU acceleration; code falls back to NumPy if unavailable.
+# Uncomment the build matching your CUDA version.
+# cupy-cuda12x
+
+# System dependency (not pip): ffmpeg, required by extract_frames.sh
